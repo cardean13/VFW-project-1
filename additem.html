@@ -13,19 +13,23 @@
 	</head>
 	<body>
 		<header>
-			<h1>Info on Lendee</h1>
+			<h1>Info on Borrower</h1>
 		</header>
 		<form action="#" method="post" id="accountInfo" />
-			<fieldset id="accountInfoSet"
+			<fieldset>
 			<legend>Account Information</legend>
 			<span>&#42;Required Data</span>
 			<ul id="errors"></ul>
-				<li id="select"><label for="media">Type of Media</label>
+				<li><label for="fname">&#42; First Name:</label><input type="text" id="fname"/></li>
+				<li><label for="lname">&#42; Last Name:</label><input type="text" id="lname"/></li>
+				<li><input type="radio" value="Male" id="male" name="sex" /> <label for="male">Male</label></li>
+				<li><input type="radio" value="Female" id="female" name="sex" /> <label for="female">Female</label></li>
+				<label for="media">&#42; Type of Media</label>
 					<select>
 						<optgroup label="Movies">
 							<option value="dvd">DVD</option>
 							<option value="vhs">VHS</option>
-							<option value="laserdisc">LaserD</option>
+							<option value="laserdisc">LaserDisc</option>
 						</optgroup>
 						<optgroup label="Games">
 							<option value="microsoft">Xbox 360</option>
@@ -34,7 +38,15 @@
 						</optgroup>
 					</select>
 				</li>
+			</fieldset>
+			<fieldset>
+				<legend>Questions</legend>
+				<span>Check For Yes</span>
+					<li><label for="reliable" >Is the borrower reliable?</label><input type="checkbox" value="Reliable?" id="reliable"/></li>
+					<li><label for="job" >Do they have a job?</label><input type="checkbox" value="Job?" id="job"/></li>
+					<li><label for="replace" >If broken, could they replace it?</label><input type="checkbox" value="Replace?" id="replace"/></li>
 		</form>
+			</fieldset>
 		<nav>
 			<a href="#" id="remove">Remove All Accounts</a>
 			<a href="#" id="allAccounts">View All Accounts</a>
